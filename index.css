@@ -42,26 +42,28 @@ hr{
     border: 1px solid #2F3E53;
 }
 
-.pass1{
+.pass1 {
+    font-family: 'Inter', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-right: 24px;
     width: 211px;
     height: 39px;
     background: #273549;
     border-radius: 6px;
-    border:0px;
-    color:white;
-    letter-spacing:1px;
+    border: 0px;
+    color: white;
+    letter-spacing: 1px;
 }
-.pass2{
+.pass2 {
+    font-family: 'Inter', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-right: 24px;
     width: 211px;
     height: 39px;
     background: #273549;
     border-radius: 6px;
-    border:0px;
-    color:white;
-    letter-spacing:1px;
-    }
+    border: 0px;
+    color: white;
+    letter-spacing: 1px;
+}
 div{
     padding-top: 35px;
 }
