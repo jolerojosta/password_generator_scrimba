@@ -1,30 +1,40 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
-let pass1El = document.getElementsByClassName("pass1")
-let pass2El = document.getElementsByClassName("pass2")
-let aaa = document.getElementById("aaa")
+const lessChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+const pass1El = document.getElementsByClassName("pass1")
+const pass2El = document.getElementsByClassName("pass2")
+const cb = document.getElementById("cb")
+
 let passLength = 15
 let stringA = ""
 let stringB = ""
 
 
 
-function randSymbol()
+function randSymbol(arr)
 {
-    let symb = Math.floor(Math.random()*characters.length)
-    return characters[symb]
+    let symb = Math.floor(Math.random()*arr.length)
+    return arr[symb]
 }
 
 function generatePasswords()
 {
     stringA = ""
     stringB = ""
+    console.log(cb.checked)
     for (let i = 0; i < passLength; i++)
     {
-        stringA += randSymbol()
+        if (!cb.checked)
+        {
+        stringA += randSymbol(characters)
+        stringB += randSymbol(characters)}
+        else {
+            stringA += randSymbol(lessChars)
+            stringB += randSymbol(lessChars)
+        }
         pass1El[0].textContent = stringA
-        stringB += randSymbol()
         pass2El[0].textContent = stringB
     }
 }

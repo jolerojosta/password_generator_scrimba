@@ -67,3 +67,25 @@ hr{
 div{
     padding-top: 35px;
 }
+input {
+    padding-top: 10px;
+    border: 1px solid #2F3E53;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    
+}
+label{
+    
+    padding-bottom: 5px;
+    
+    color: white;
+    
+}
+br{
+    display:block;
+    line-height: 22px;
+    margin: 10px;
+    content: " ";
+}
+
